@@ -3,7 +3,8 @@ Hugo source for public website
 
 
 ## Requirements
-Make sure you have `hugo` installed []()
+Make sure you have `hugo` installed [link](https://gohugo.io/getting-started/quick-start/)
 
 ## Publishing
-https://gohugo.io/getting-started/quick-start/
+1. Make changes
+2. Run `deploy.sh`
