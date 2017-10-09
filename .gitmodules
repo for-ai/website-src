@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/for-ai/for-ai.github.io.git
+	branch = master
