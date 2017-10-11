@@ -1,0 +1,169 @@
+@import "_reset.min.scss";
+
+$font-stack: "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+@mixin respond-to-specific($width){
+  @media only screen and (max-width: $width){
+    @content
+  }
+}
+
+body{
+  font-family: $font-stack;
+}
+
+.clear{
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: #226899;
+
+  &:hover {
+    text-decoration: none;
+    color: #cccccc;
+  }
+
+  &:visited {
+    color: #226899;
+  }
+}
+
+#header {
+  left: 0;
+  right: 0;
+  font-weight: 700;
+  margin-top: 45px;
+  position: absolute;
+  padding-left: 30px;
+  padding-right: 15px;
+  display: block;
+  @include respond-to-specific(1050px){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include respond-to-specific(769px){
+    position: fixed;
+    padding-bottom: 15px;
+  }
+
+  background-color: #ffffff;
+  border: 0;
+  font-size: 16px;
+
+  #mmenu-button, #mmenu-closer {
+    display: none;
+    @include respond-to-specific(600px){    
+      display: block;
+      border: 0;
+      color: #ffffff;
+      position: relative;
+      float: right;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      background-color: #ffffff;
+      background-image: none;
+      border: 1px solid #ffffff;
+      border-radius: 4px;
+      padding: 0;
+    }
+  }
+
+  #options{
+    display: block;
+    @include respond-to-specific(600px){
+      display: none;
+    }
+  }
+
+  #mmenu-closer{
+    margin-right: 19px;
+    margin-top: 25px;
+  }
+
+  #mmenu{
+    top:0;
+    right:0;
+    height:100%;
+    width:100%;
+    position: fixed;
+    z-index: 100;
+    display: none;
+    color: #333333;
+    #moptions{
+      margin-top: 50px;
+      font-size: 24px;
+
+    }
+  }
+
+
+  ul {
+    @include respond-to-specific(769px){
+      margin-top: 20px;
+    }
+    float: right;
+    @include respond-to-specific(600px){
+      float: none;
+    }
+    li {
+      a:hover {
+        color: #cccccc;
+      }
+
+      a {
+        color: #333333;
+      }
+
+      a:active {
+        color: #e0e0e0;
+      }
+      padding: 5px 20px;
+      float: left;
+      @include respond-to-specific(600px){
+        float: none;
+      }
+    }
+  }
+}
+
+
+#page{
+  padding-top: 100px;
+  display: block;
+  font-size: 18px;
+  h1{
+    font-size: 3em;
+  }
+
+  .container-block{
+    padding: 30px;
+  }
+
+  #intro-sect{
+    #intro-header{
+      h1{
+        font-size: 6em;
+        font-weight: 700;
+      }
+      padding-left: 50px;
+      bottom: 15%;
+      position: absolute;
+    }
+
+    #intro-graph{
+      path{
+        stroke: #000;
+        stroke-width: 0.1;
+        stroke: rgba(0,0,0,0.2);
+      }
+
+      background-color: transparent;
+      width: 700px;
+      float: right;
+      height: 400px;
+    }
+  }
+}
