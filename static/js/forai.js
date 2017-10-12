@@ -180,11 +180,6 @@ function init(){
               return (Math.cos(2*x*Math.PI)*Math.cos(x/15*Math.PI)*Math.cos(y/15*Math.PI)*60+Math.cos(x/8*Math.PI)*Math.cos(y/10*Math.PI)*40);
             })
         },
-        {
-          data: dataFromFormular(function(x,y){
-              return -(Math.cos(Math.sqrt(x*x+y*y)/6*Math.PI)+1)*150/(Math.pow(x*x+y*y+1,0.3)+1)*x*x+50;
-            })
-        },
       ];
     var selected=surfaces[0];
     var svg=d3.select("#intro-graph>svg")
