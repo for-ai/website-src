@@ -90,7 +90,7 @@ function init(){
           var dr=node.selectAll('path').data(d0);
           dr.enter().append("path");
           if(trans){
-            dr=dr.transition().delay(trans.delay()).duration(trans.duration());
+            dr=dr.transition().delay( function(d, i) { return i * 1.2; }).duration(trans.duration());
           }
           dr.attr("d",function(d){return d.path;});
           if(colorFunction){
@@ -207,7 +207,7 @@ function init(){
     var curIdx = 0;
     setInterval(function(){
         md.data([surfaces[curIdx].data]).surface3D(width,height)
-        .transition().duration(500)
+        .transition().duration(1000)
           .surfaceHeight(function(d){ 
             return d;
           }).surfaceColor(function(d){
