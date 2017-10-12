@@ -8,6 +8,12 @@ $font-stack: "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
   }
 }
 
+@mixin bottom-shadow(){
+  -webkit-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.26);
+  -moz-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.26);
+  box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.26);
+}
+
 body{
   font-family: $font-stack;
 }
@@ -140,28 +146,36 @@ a {
 
   .container-block{
     padding: 30px;
-  }
-
-  #intro-sect{
     width: 1000px;
     margin: 0 auto;
     @include respond-to-specific(1024px){
       width: 100%;
     }
+    h1{
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    p{
+      line-height: 1.6;
+      font-size: 1.5em;
+    }
 
+    margin-bottom: 100px;
+  }
+
+  #intro-sect{
     #intro-header{
       h1{
         font-size: 6em;
         font-weight: 700;
       }
-      padding-left: 50px;
       bottom: 15%;
       position: absolute;
       @include respond-to-specific(769px){
         h1{
           font-size: 5em;
         }
-        padding-left: 0px;
       }
       @include respond-to-specific(450px){
         p{
@@ -191,5 +205,21 @@ a {
       float: right;
       height: 800px;
     }
+  }
+
+  #about-sect{
+    @include bottom-shadow();
+    
+  }
+
+  #team-sect{
+    @include bottom-shadow();
+    
+  }
+
+  #contact-sect{
+    @include bottom-shadow();
+    width: 600px;
+    margin: 0 auto;
   }
 }
