@@ -207,7 +207,7 @@ function init(){
     var curIdx = 0;
     setInterval(function(){
         md.data([surfaces[curIdx].data]).surface3D(width,height)
-        .transition().duration(500)
+        .transition().duration(1000)
           .surfaceHeight(function(d){ 
             return d;
           }).surfaceColor(function(d){
