@@ -151,9 +151,10 @@ a {
   .container-block{
     padding: 30px;
     width: 1000px;
+    background-color: #ffffff;
     margin: 0 auto;
     @include respond-to-specific(1024px){
-      width: 100%;
+      width: 98%;
     }
     h1{
       font-size: 3em;
@@ -170,29 +171,18 @@ a {
 
     margin-bottom: 100px;
     @include respond-to-specific(450px){
+      width: 98%;
       margin-bottom: 30px;
     }
   }
-
+  
+  #intro-sect-container{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+  }
   #intro-sect{
-    #intro-header{
-      h1{
-        font-size: 6em;
-        font-weight: 700;
-      }
-      bottom: 15%;
-      position: absolute;
-      @include respond-to-specific(450px){
-        p{
-          font-size: 1.2em;
-        }
-        h1{
-          font-size: 5em;
-        }
-        position: relative;
-      }
-    }
-
+    margin: 0 auto;
     #intro-graph{
       path{
         stroke: #000;
@@ -213,12 +203,46 @@ a {
       width: 900px;
       float: right;
       height: 800px;
+      @include respond-to-specific(450px){
+        height: 600px;
+      }
+    }
+  }
+
+  #title-sect{
+    margin: 0 auto;
+    margin-top: 400px;
+    @include respond-to-specific(450px){
+      margin-top: 0;
+    }
+    #intro-header{
+      margin-top: 30%;
+      @include respond-to-specific(450px){
+        margin-top: 5%;
+      }
+      h1{
+        font-size: 6em;
+        font-weight: 700;
+      }
+      background-color: transparent;
+      bottom: 15%;
+      @include respond-to-specific(450px){
+        top: 10%;
+        p{
+          font-size: 1.2em;
+        }
+        h1{
+          font-size: 5em;
+        }
+      }
     }
   }
 
   #about-sect{
     @include bottom-shadow();
-    
+    @include respond-to-specific(450px){
+      margin-top: 400px;
+    }
   }
 
   #team-sect{
