@@ -51,6 +51,7 @@ a {
   }
 
   @include respond-to-specific(769px){
+    display: none;
     position: fixed;
     padding-bottom: 15px;
   }
@@ -62,7 +63,7 @@ a {
   #mmenu-button, #mmenu-closer {
     display: none;
     @include respond-to-specific(600px){    
-      display: block;
+      display: none;
       border: 0;
       color: #ffffff;
       position: relative;
@@ -140,6 +141,9 @@ a {
   padding-top: 100px;
   display: block;
   font-size: 18px;
+  @include respond-to-specific(769px){
+    font-size: 14px;
+  }
   h1{
     font-size: 3em;
   }
@@ -159,9 +163,15 @@ a {
     p{
       line-height: 1.6;
       font-size: 1.5em;
+      @include respond-to-specific(769px){
+        font-size: 1em;
+      }
     }
 
     margin-bottom: 100px;
+    @include respond-to-specific(450px){
+      margin-bottom: 30px;
+    }
   }
 
   #intro-sect{
@@ -172,17 +182,12 @@ a {
       }
       bottom: 15%;
       position: absolute;
-      @include respond-to-specific(769px){
-        h1{
-          font-size: 5em;
-        }
-      }
       @include respond-to-specific(450px){
         p{
-          font-size: 0.8em;
+          font-size: 1.2em;
         }
         h1{
-          font-size: 4em;
+          font-size: 5em;
         }
         position: relative;
       }
@@ -193,6 +198,10 @@ a {
         stroke: #000;
         stroke-width: 0.1;
         stroke: rgba(0,0,0,0.2);
+        &:hover{
+          stroke-width: 1;
+          stroke: rgba(255, 255, 255, 1);
+        }
       }
 
       svg{
