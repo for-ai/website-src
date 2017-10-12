@@ -90,7 +90,7 @@ function init(){
           var dr=node.selectAll('path').data(d0);
           dr.enter().append("path");
           if(trans){
-            dr=dr.transition().delay(trans.delay()).duration(trans.duration());
+            dr=dr.transition().delay( function(d, i) { return i * 1.2; }).duration(trans.duration());
           }
           dr.attr("d",function(d){return d.path;});
           if(colorFunction){
