@@ -1,12 +1,4 @@
 {{partial "header.html" .}}
-<div id="intro-sect-container">
-<div id="intro-sect" class="container-block">
-    <div id="intro-graph">
-        <svg><g></g></svg>
-    </div>
-    <div class="clear"></div>
-</div>
-</div>
 <div id="title-sect">
     <div id="intro-header" class="container-block">
         <h1>FOR.ai</h1>
@@ -24,6 +16,7 @@
         {{range where .Site.Pages "Section" "team"}}
             {{ .Render "li"}}
         {{end}}
+        <div class="clear"></div>
     </div>
 </div>
 {{partial "footer.html" .}}

@@ -51,12 +51,12 @@ a {
   }
 
   @include respond-to-specific(769px){
-    display: none;
+    right: 10px;
     position: fixed;
     padding-bottom: 15px;
   }
 
-  background-color: #ffffff;
+  background-color: transparent;
   border: 0;
   font-size: 16px;
 
@@ -81,7 +81,7 @@ a {
   #options{
     display: block;
     @include respond-to-specific(600px){
-      display: none;
+      display: block;
     }
   }
 
@@ -112,9 +112,6 @@ a {
       margin-top: 20px;
     }
     float: right;
-    @include respond-to-specific(600px){
-      float: none;
-    }
     li {
       a:hover {
         color: #cccccc;
@@ -154,7 +151,7 @@ a {
     background-color: #ffffff;
     margin: 0 auto;
     @include respond-to-specific(1024px){
-      width: 98%;
+      width: 80%;
     }
     h1{
       font-size: 3em;
@@ -171,7 +168,6 @@ a {
 
     margin-bottom: 100px;
     @include respond-to-specific(450px){
-      width: 98%;
       margin-bottom: 30px;
     }
   }
@@ -184,6 +180,7 @@ a {
   #intro-sect{
     margin: 0 auto;
     #intro-graph{
+      margin-top: 100px;
       path{
         stroke: #000;
         stroke-width: 0.1;
@@ -211,21 +208,12 @@ a {
 
   #title-sect{
     margin: 0 auto;
-    margin-top: 400px;
-    @include respond-to-specific(450px){
-      margin-top: 0;
-    }
     #intro-header{
-      margin-top: 30%;
-      @include respond-to-specific(450px){
-        margin-top: 5%;
-      }
       h1{
         font-size: 6em;
         font-weight: 700;
       }
       background-color: transparent;
-      bottom: 15%;
       @include respond-to-specific(450px){
         top: 10%;
         p{
@@ -239,20 +227,67 @@ a {
   }
 
   #about-sect{
+    margin-top: 400px;
     @include bottom-shadow();
-    @include respond-to-specific(450px){
-      margin-top: 400px;
-    }
   }
 
   #team-sect{
+    #team-pics{
+      padding-top: 50px;
+    }
     @include bottom-shadow();
-    
+    .team-member{
+      width: 18%;
+      padding: 1%;
+      float: left;
+      height: 250px;
+      @include respond-to-specific(450px){
+        float: none;
+        margin: 0 auto;
+
+      }
+      @include respond-to-specific(769px){
+        width: 150px;
+      }
+
+      .member-image{
+        img{
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .member-name{
+        text-align: center;
+        font-weight: 700; 
+        margin-top: 10px; 
+        margin-bottom: 10px; 
+      }
+    }
+  }
+
+  #contact-top-sect{
+    h1{
+      font-size: 6em;
+      font-weight: 700;
+    }
+    background-color: transparent;
+    @include respond-to-specific(450px){
+      top: 10%;
+      p{
+        font-size: 1.2em;
+      }
+      h1{
+        font-size: 5em;
+      }
+    }
   }
 
   #contact-sect{
     @include bottom-shadow();
     width: 600px;
     margin: 0 auto;
+    margin-top: 500px;
+    margin-bottom: 50px;
   }
 }
