@@ -12,6 +12,7 @@ $font-stack: "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
   -webkit-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.26);
   -moz-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.26);
   box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.26);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 body{
@@ -160,7 +161,7 @@ a {
     }
     p{
       line-height: 1.6;
-      font-size: 1.5em;
+      font-size: 1em;
       @include respond-to-specific(769px){
         font-size: 1em;
       }
