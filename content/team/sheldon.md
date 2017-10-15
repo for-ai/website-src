@@ -3,4 +3,5 @@
     bio = 'yolo'
     date = '2017-10-17'
     imgSrc = 'img/sheldon.png'
+    email = 'sheldon@for.ai'
 +++
