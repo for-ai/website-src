@@ -225,13 +225,9 @@ a {
       }
     }
   }
-
-  #about-sect{
-    margin-top: 400px;
-    @include bottom-shadow();
-  }
-
+  
   #team-sect{
+    margin-top: 400px;
     #team-pics{
       padding-top: 50px;
     }
