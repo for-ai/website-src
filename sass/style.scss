@@ -14,9 +14,14 @@ $font-stack: "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica
   box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.26);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
-
+html{
+  background-color: #fafafa;
+}
 body{
+  background-color: none;
   font-family: $font-stack;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 .clear{
@@ -180,6 +185,7 @@ a {
   }
   #intro-sect{
     margin: 0 auto;
+    background-color: #fafafa;
     #intro-graph{
       path{
         stroke: #000;

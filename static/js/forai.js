@@ -195,23 +195,25 @@ function init(){
     
     renderGraphData(surfaces[0].data, 0)
     var curIdx = 1;
-    var renderInterval = setInterval(function(){
-        renderGraphData(surfaces[curIdx].data, curIdx)
+    var renderIntervalInit = function() {
+        return setInterval(function(){
+            renderGraphData(surfaces[curIdx].data, curIdx)
 
-        curIdx++;
-        if(curIdx >= surfaces.length){
-            curIdx = 0;
-        }
-    }, 5000)
+            curIdx++;
+            if(curIdx >= surfaces.length){
+                curIdx = 0;
+            }
+        }, 5000)
+    }
 
+    var renderInterval = renderIntervalInit()
     window.onblur = function() {
-      renderInterval.pause()
+      clearInterval(renderInterval)
     }
 
     window.onfocus = function() {
-      renderInterval.resume()
+      renderInterval = renderInterval()
     }
-
 } 
 
 function renderGraphData(data, idx){
