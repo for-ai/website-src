@@ -294,4 +294,9 @@ a {
   #join-sect{
     @include bottom-shadow();
   }
+
+  #blog-sect{
+    @include bottom-shadow();
+  }
+  
 }
