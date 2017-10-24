@@ -1,3 +1,5 @@
 {{partial "header.html" .}}
-{{ .Content }}
+<div id="blog-content-sect" class="container-block">
+    {{ .Content | markdownify }}
+</div>
 {{partial "footer.html" .}}

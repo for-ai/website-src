@@ -264,6 +264,9 @@ a {
         font-weight: 700; 
         margin-top: 10px; 
         margin-bottom: 10px; 
+        a{
+          color: #333333;
+        }
       }
     }
   }
@@ -297,6 +300,15 @@ a {
 
   #blog-sect{
     @include bottom-shadow();
+  }
+
+  #blog-content-sect{ 
+    @include bottom-shadow();
+    h2{
+      font-size: 2em;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
   }
   
 }
