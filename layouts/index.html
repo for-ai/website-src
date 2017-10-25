@@ -13,6 +13,13 @@
             {{ .Render "li"}}
         {{end}}
         <div class="clear"></div>
+        
+        <span class="emails">    
+            {
+            {{range $i, $e := where .Site.Pages "Section" "team"}}{{if not (eq $e.File.BaseFileName "")}}{{ if $i }}, {{ end }}<a href="mailto:{{$e.File.TranslationBaseName}}@for.ai">{{$e.File.TranslationBaseName}}</a>{{end}}{{end}}
+            }
+            <span>&commat;for.ai</span>
+        </span>
     </div>
 </div>
 <div id="join-sect" class="container-block">
