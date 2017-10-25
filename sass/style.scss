@@ -153,10 +153,10 @@ a {
 
   .container-block{
     padding: 30px;
-    width: 900px;
+    width: 1000px;
     background-color: #ffffff;
     margin: 0 auto;
-    @include respond-to-specific(1024px){
+    @include respond-to-specific(1144px){
       width: 80%;
     }
     h1{
