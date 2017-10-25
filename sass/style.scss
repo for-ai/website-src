@@ -298,11 +298,17 @@ a {
     @include bottom-shadow();
     margin: 0 auto;
     margin-bottom: 50px;
-    width: 350px;
+    
     h2{
       font-weight: 700;
       margin: 20px auto;
     }
+    
+    width: 350px;
+    #mc_embed_signup{
+      text-align: center;
+    }
+
     #mce-EMAIL{
       width: 100%;
       display: block;
