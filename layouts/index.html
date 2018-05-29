@@ -5,59 +5,81 @@
         <p>Toronto-based AI Research Team</p>
     </div>
 </div>
-<div id="team-sect" class="container-block">
-    <h1>About Us</h1>
-    <p>We are a multi-disciplinary team of scientists and engineers.</p>
-    <div class="team-wrapper">
-        <div id="team-pics">
-            {{range where .Site.Pages "Section" "team"}}
-                {{ .Render "li"}}
-            {{end}}
-            <div class="clear"></div>
-            
-            <span class="emails">    
-                {
-                {{range $i, $e := where .Site.Pages "Section" "team"}}{{if not (eq $e.File.BaseFileName "")}}{{ if $i }}, {{ end }}<a href="mailto:{{$e.File.TranslationBaseName}}@for.ai">{{$e.File.TranslationBaseName}}</a>{{end}}{{end}}
-                }
-                <span>&commat;for.ai</span>
-            </span>
-        </div>
+div id="team-sect" class="container-block">
+<h1>About Us</h1>
+<p>We are a multi-disciplinary team of scientists and engineers.</p>
+<div class="team-wrapper">
+    <div id="team-pics">
+        {{range where .Site.Pages "Section" "team"}} {{ .Render "li"}} {{end}}
+        <div class="clear"></div>
+
+        <span class="emails">
+            { {{range $i, $e := where .Site.Pages "Section" "team"}}{{if not (eq $e.File.BaseFileName "")}}{{ if $i }}, {{ end }}
+            <a href="mailto:{{$e.File.TranslationBaseName}}@for.ai">{{$e.File.TranslationBaseName}}</a>{{end}}{{end}} }
+            <span>&commat;for.ai</span>
+        </span>
     </div>
 </div>
+</div>
+<!-- <div id="publish-sect" class="container-block">
+    <h1>Publications</h1>
+    <div class="publication">
+        <h2>Unsupervised Cipher Cracking Using Discrete GANs</h2>
+        <strong>abstract</strong>
+        <div class="desc">
+            This work details CipherGAN, an architecture inspired by CycleGAN used for inferring the underlying cipher mapping given
+            banks of unpaired ciphertext and plaintext. We demonstrate that CipherGAN is capable of cracking language data
+            enciphered using shift and Vigenere ciphers to a high degree of fidelity and for vocabularies much larger than
+            previously achieved. We present how CycleGAN can be made compatible with discrete data and train in a stable
+            way. We then prove that the technique used in CipherGAN avoids the common problem of uninformative discrimination
+            associated with GANs applied to discrete data.
+        </div>
+    </div>
+</div> -->
 <div id="join-sect" class="container-block">
     <h1>Join The Team!</h1>
     <p>
-        We're looking for graduate and undergraduate students in Toronto with a background in computer science, mathematics and statistics to join the team and help us realize our research projects.
+        We're looking for graduate and undergraduate students in Toronto with a background in computer science, mathematics and statistics
+        to join the team and help us realize our research projects.
     </p>
     <br>
     <br>
     <p>
-        If you're interested in deep learning and neural networks and have a foundation in calculus, statistics and software development then you're a perfect fit.
+        If you're interested in deep learning and neural networks and have a foundation in calculus, statistics and software development
+        then you're a perfect fit.
     </p>
     <br>
     <br>
     <p>
-        At present the team is unsalaried, but we do provide mentorship and authorship opportunities and we have a rich set of resources and training infrastructure at our disposal!
+        At present the team is unsalaried, but we do provide mentorship and authorship opportunities and we have a rich set of resources
+        and training infrastructure at our disposal!
     </p>
     <br>
     <br>
     <p>
-        Email: <a href="mailto:team@for.ai">team@for.ai</a> with your resume and a brief note on your interest in ML and any relevant background (courses taken, projects completed, etc.)
+        Email:
+        <a href="mailto:team@for.ai">team@for.ai</a> with your resume and a brief note on your interest in ML and any relevant background (courses taken,
+        projects completed, etc.)
     </p>
 </div>
 <div id="contact-sect" class="container-block">
-<!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup">
-<form action="https://for.us17.list-manage.com/subscribe/post?u=d95c11b747ea5c6f24b834a1a&amp;id=bde4ea2240" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-    <h2 for="mce-EMAIL">Subscribe to our mailing list</h2>
-    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d95c11b747ea5c6f24b834a1a_bde4ea2240" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup">
+        <form action="https://for.us17.list-manage.com/subscribe/post?u=d95c11b747ea5c6f24b834a1a&amp;id=bde4ea2240" method="post"
+            id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+                <h2 for="mce-EMAIL">Subscribe to our mailing list</h2>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_d95c11b747ea5c6f24b834a1a_bde4ea2240" tabindex="-1" value="">
+                </div>
+                <div class="clear">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </div>
+            </div>
+        </form>
     </div>
-</form>
-</div>
-<!--End mc_embed_signup-->
+    <!--End mc_embed_signup-->
 </div>
 {{partial "footer.html" .}}
