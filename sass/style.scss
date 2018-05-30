@@ -215,15 +215,24 @@ a {
   #title-sect{
     margin: 0 auto;
     #intro-header{
-      h1{
-        font-size: 6em;
-        font-weight: 700;
+      #title-logo{
+        margin-top: -50px;
+        width: 300px;
       }
       background-color: transparent;
+      .subtitle{
+        font-size: 1.5em;
+        margin-left: 25px;
+      }
       @include respond-to-specific(450px){
         top: 10%;
-        p{
-          font-size: 1.2em;
+        #title-logo{
+          width: 98%;
+        }
+        .subtitle{
+          margin: 0 auto;
+          text-align: center;
+          font-style: bold;
         }
         h1{
           font-size: 5em;
