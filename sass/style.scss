@@ -216,13 +216,12 @@ a {
     margin: 0 auto;
     #intro-header{
       #title-logo{
-        margin-top: -50px;
         width: 300px;
       }
       background-color: transparent;
       .subtitle{
-        font-size: 1.5em;
-        margin-left: 25px;
+        margin-top: 15px;
+        font-size: 1.2em;
       }
       @include respond-to-specific(450px){
         top: 10%;
