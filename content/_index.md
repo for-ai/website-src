@@ -1,4 +1,4 @@
 +++
-    title = "FOR.ai | AI Research Group"
+    title = "FOR.ai | AI Research Collaboration"
     page = "home"
 +++
