@@ -1,3 +1,46 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
+
+[params.team]
+  [params.team.Aidan]
+    title = 'Aidan Gomez'
+    bio = 'Aidan is a machine learning researcher with the University of Toronto Machine Learning Group. Works on core machine learning theory; trying to give theoretical explanations to empirically observed phenomena.'
+    date = '2017-10-17'
+    img = 'img/aidan.png'
+    link='https://aidangomez.ca'
+    order = 1
+  [params.team.Ivan]
+    title = 'Ivan Zhang'
+    date = '2017-10-17'
+    img = 'img/ivan.png'
+    link = 'https://ivanzhang.ca'
+    order = 2
+  [params.team.Bryan]
+    title = 'Bryan Li'
+    bio = ''
+    date = '2017-10-17'
+    img = 'img/bryan.png'
+    link = 'https://bryanli.xyz'
+    order = 3
+  [params.team.Sheldon]
+    title = 'Sheldon Huang'
+    bio = 'yolo'
+    date = '2017-10-17'
+    img = 'img/sheldon.png'
+    link='http://www.cs.toronto.edu/~huang/'
+    order = 4
+  [params.team.Divyam]
+    title = 'Divyam Madaan'
+    bio = 'yolo'
+    date = '2017-10-17'
+    img = 'img/divyam.jpg'
+    link='https://www.linkedin.com/in/dmadaan3897/'
+    order = 5
+  [params.team.Siddhartha]
+    title = 'Siddhartha Rao Kamalakara'
+    bio = 'yolo'
+    date = '2017-10-17'
+    img = 'img/siddhartha.jpg'
+    link='https://www.linkedin.com/in/siddhartha-rao-kamalakara/'
+    order = 6
