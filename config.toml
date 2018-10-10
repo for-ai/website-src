@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://for.ai/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "FOR.ai"
 
 [params.team]
   [params.team.Aidan]
@@ -28,7 +28,7 @@ title = "My New Hugo Site"
     bio = 'yolo'
     date = '2017-10-17'
     img = 'img/sheldon.png'
-    link='http://www.cs.toronto.edu/~huang/'
+    link='https://www.cs.toronto.edu/~huang/'
     order = 4
   [params.team.Divyam]
     title = 'Divyam Madaan'
