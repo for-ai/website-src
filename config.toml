@@ -21,7 +21,7 @@ title = "FOR.ai"
     bio = ''
     date = '2017-10-17'
     img = 'img/bryan.png'
-    link = 'https://bryanli.xyz'
+    link = 'https://bryanli.io'
     order = 3
   [params.team.Sheldon]
     title = 'Sheldon Huang'
