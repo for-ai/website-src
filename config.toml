@@ -10,12 +10,14 @@ title = "FOR.ai"
     img = 'img/aidan.png'
     link='https://aidangomez.ca'
     order = 1
+    email_suffix = 'aidan'
   [params.team.Ivan]
     title = 'Ivan Zhang'
     date = '2017-10-17'
     img = 'img/ivan.png'
     link = 'https://ivanzhang.ca'
     order = 2
+    email_suffix = 'ivan'
   [params.team.Bryan]
     title = 'Bryan Li'
     bio = ''
@@ -23,24 +25,28 @@ title = "FOR.ai"
     img = 'img/bryan.png'
     link = 'https://bryanli.io'
     order = 3
+    email_suffix = 'bryan'
   [params.team.Sheldon]
     title = 'Sheldon Huang'
-    bio = 'yolo'
+    bio = ''
     date = '2017-10-17'
     img = 'img/sheldon.png'
     link='https://www.cs.toronto.edu/~huang/'
     order = 4
+    email_suffix = 'sheldon'
   [params.team.Divyam]
     title = 'Divyam Madaan'
-    bio = 'yolo'
+    bio = ''
     date = '2017-10-17'
     img = 'img/divyam.jpg'
     link='https://www.linkedin.com/in/dmadaan3897/'
     order = 5
+    email_suffix = 'divyam'
   [params.team.Siddhartha]
     title = 'Siddhartha Rao Kamalakara'
-    bio = 'yolo'
+    bio = ''
     date = '2017-10-17'
     img = 'img/siddhartha.jpg'
     link='https://www.linkedin.com/in/siddhartha-rao-kamalakara/'
     order = 6
+    email_suffix = 'siddhartha'
