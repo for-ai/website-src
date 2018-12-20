@@ -20,6 +20,7 @@ html{
 body{
   background-color: none;
   font-family: $font-stack;
+  font-size: 18px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -31,15 +32,21 @@ body{
 a {
   text-decoration: none;
   color: #226899;
-
+  -webkit-transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all; 
+  transition: 0.2s ease all;
   &:hover {
-    text-decoration: none;
-    color: #cccccc;
+    color: #cccccc !important;
   }
-
   &:visited {
     color: #226899;
   }
+}
+
+p {
+  word-break: break-word;
+  white-space: pre-line;
+  line-height: 1.5;
 }
 
 #header {
@@ -143,13 +150,6 @@ a {
 #page{
   padding-top: 100px;
   display: block;
-  font-size: 1.1em;
-  @include respond-to-specific(769px){
-    font-size: 14px;
-  }
-  h1{
-    font-size: 2em;
-  }
 
   .container-block{
     padding: 30px;
@@ -159,13 +159,12 @@ a {
     @include respond-to-specific(1144px){
       width: 80%;
     }
-    h1{
-      font-size: 2em;
+    h1 {
+      font-size: 1.8em;
       font-weight: 700;
       margin-bottom: 15px;
     }
-    p{
-      line-height: 1.6;
+    p {
       font-size: 1em;
       @include respond-to-specific(769px){
         font-size: 1em;
@@ -222,18 +221,19 @@ a {
       .subtitle{
         margin-top: 15px;
         font-size: 1.2em;
+        color: #3B325D;
       }
       @include respond-to-specific(450px){
         top: 10%;
-        #title-logo{
+        #title-logo {
           width: 98%;
         }
-        .subtitle{
+        .subtitle {
           margin: 0 auto;
-          text-align: center;
-          font-style: bold;
+          text-align: left;
+          font-size: 1.1em;
         }
-        h1{
+        h1 {
           font-size: 5em;
         }
       }
@@ -248,14 +248,19 @@ a {
         font-size: 1.2em;
         line-height: 1.5;
       } 
-      .authors{
-        line-height: 2;
-        font-style: italic;
-        font-size: 0.9em;
+      .authors {
+        padding: 0 0 10px 0;
+        color: #757575;
+        line-height: 1.2em;
+      }
+      .conference {
+        padding: 10px 0;
+        color: #757575;
       }
       .desc {
-        line-height: 1.5;
-        font-size: 0.9em;
+        p {
+          line-height: 1.2;
+        }
       }
     } 
   }
@@ -267,7 +272,7 @@ a {
     @include bottom-shadow();
     .team-wrapper{
       text-align: center;
-      width: 90%;
+      width: 100%;
       margin: 0 auto;
       .team-member{
         width: 14%;
@@ -277,7 +282,6 @@ a {
         @include respond-to-specific(450px){
           float: none;
           margin: 0 auto;
-
         }
         @include respond-to-specific(769px){
           width: 150px;
@@ -365,6 +369,7 @@ a {
 
   #join-sect{
     @include bottom-shadow();
+    margin-bottom:5em;
   }
 
   #blog-sect{

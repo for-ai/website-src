@@ -7,17 +7,9 @@
 </div>
 <div id="team-sect" class="container-block">
   <h1>About Us</h1>
-  <p>
-    We are a multi-disciplinary team of scientists and engineers who like doing research for fun. Our only objective is
-    to publish
-    good machine learning research that is useful and interesting. Our collaborators include researchers from labs like
-    Google Brain, Oxford University, and
-    Toronto's Vector Institute.
-  </p>
-  <br>
-  <p>
-    Our published experiments and tools can be found on our <a href="https://github.com/for-ai/">GitHub</a>.
-  </p>
+  <p>We are a multi-disciplinary team of scientists and engineers who like doing research for fun. Our only objective is to publish good machine learning research that is useful and interesting. Our collaborators include researchers from labs like Google Brain, Oxford University, and Toronto's Vector Institute.
+
+    Our published experiments and tools can be found on our <a href="https://github.com/for-ai/">GitHub</a>.</p>
   <div class="team-wrapper">
     <div id="team-pics">
       {{range sort .Site.Params.team "order" "asc" }}
@@ -43,40 +35,16 @@
 </div>
 <div id="publish-sect" class="container-block">
   <h1>Publications</h1>
-  {{range where .Site.Pages "Section" "publications"}} {{ .Render "li"}} {{end}}
+  {{range last 2 (where .Site.Pages "Section" "publications")}} {{ .Render "li"}} {{end}}
 </div>
 <div id="join-sect" class="container-block">
   <h1>Join The Team!</h1>
-  <p>
-    We're looking for individuals interested in contributing to cross-institutional research projects on machine
-    learning using
-    neural networks. We recruit students and industrial members globally. Our only requirement is a strong background
-    in
-    computer science, mathematics and statistics. Remote work is our modus operandi, although we regularly organize
-    working
-    sessions in cities with more than one member.
-  </p>
-  <br>
-  <br>
-  <p>
-    If you're interested in deep learning and neural networks, and are well-versed in calculus, statistics, and
-    software development
-    then you're a perfect fit.
-  </p>
-  <br>
-  <br>
-  <p>
-    The team is volunteer-run, but we do provide mentorship and authorship opportunities, and we have a rich set of
-    resources
-    and training infrastructure at our disposal!
-  </p>
-  <br>
-  <br>
-  <p>
-    Email:
-    <a href="mailto:team@for.ai">team@for.ai</a> with your resume and a brief note on your interest in ML and any
-    relevant
-    background (courses taken, projects completed, etc.)
-  </p>
+  <p>We're looking for individuals interested in contributing to cross-institutional research projects on machine learning using neural networks. We recruit students and industrial members globally. Our only requirement is a strong background in computer science, mathematics and statistics. Remote work is our modus operandi, although we regularly organize working sessions in cities with more than one member.
+
+    If you're interested in deep learning and neural networks, and are well-versed in calculus, statistics, and software development then you're a perfect fit.
+
+    The team is volunteer-run, but we do provide mentorship and authorship opportunities, and we have a rich set of resources and training infrastructure at our disposal!
+
+    Email: <a href="mailto:team@for.ai">team@for.ai</a> with your resume and a brief note on your interest in ML and any relevant background (courses taken, projects completed, etc.)</p>
 </div>
 {{partial "footer.html" .}}
