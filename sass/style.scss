@@ -1,25 +1,26 @@
-@import "_reset.min.scss";
-
-$font-stack: "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-
 @mixin respond-to-specific($width){
-  @media only screen and (max-width: $width){
+  @media only screen and (max-width: $width) {
     @content
   }
 }
 
-@mixin bottom-shadow(){
+@mixin bottom-shadow() {
   -webkit-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.26);
   -moz-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.26);
   box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.26);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
-html{
+
+$forai-color: #3B325D;
+$link-color: #226899;
+$grey-color: #757575;
+
+html {
   background-color: #fafafa;
 }
+
 body{
-  background-color: none;
-  font-family: $font-stack;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -31,7 +32,7 @@ body{
 
 a {
   text-decoration: none;
-  color: #226899;
+  color: $link-color;
   -webkit-transition: 0.2s ease all;
   -moz-transition: 0.2s ease all; 
   transition: 0.2s ease all;
@@ -39,7 +40,7 @@ a {
     color: #cccccc !important;
   }
   &:visited {
-    color: #226899;
+    color: $link-color;
   }
 }
 
@@ -47,6 +48,19 @@ p {
   word-break: break-word;
   white-space: pre-line;
   line-height: 1.5;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 1.6em;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.2em;
 }
 
 #header {
@@ -155,25 +169,15 @@ p {
     padding: 30px;
     width: 1000px;
     background-color: #ffffff;
-    margin: 0 auto;
+    margin: 0 auto 3em;
     @include respond-to-specific(1144px){
       width: 80%;
     }
     h1 {
-      font-size: 1.8em;
-      font-weight: 700;
-      margin-bottom: 15px;
+      margin: 0 0 0.2em 0;
     }
-    p {
-      font-size: 1em;
-      @include respond-to-specific(769px){
-        font-size: 1em;
-      }
-    }
-
-    margin-bottom: 3em;
     @include respond-to-specific(450px){
-      margin-bottom: 30px;
+      margin-bottom: 2em;
     }
   }
   
@@ -211,19 +215,19 @@ p {
     }
   }
 
-  #title-sect{
+  .title-sect{
     margin: 0 auto;
-    #intro-header{
+    .intro-header{
       #title-logo{
         width: 300px;
       }
       background-color: transparent;
-      .subtitle{
+      .subtitle {
         margin-top: 15px;
         font-size: 1.2em;
         color: #3B325D;
       }
-      @include respond-to-specific(450px){
+      @include respond-to-specific(450px) {
         top: 10%;
         #title-logo {
           width: 98%;
@@ -233,44 +237,45 @@ p {
           text-align: left;
           font-size: 1.1em;
         }
-        h1 {
-          font-size: 5em;
-        }
       }
     }
   }
   
-  #publish-sect {
+  .publish-sect {
     @include bottom-shadow();    
     .publication{
       margin-bottom: 15px;
       h2 {
-        font-size: 1.2em;
+        margin: 0;
         line-height: 1.5;
       } 
       .authors {
-        padding: 0 0 10px 0;
-        color: #757575;
-        line-height: 1.2em;
+        p {
+          color: $grey-color;
+          line-height: 1.2;
+        }
       }
       .conference {
-        padding: 10px 0;
-        color: #757575;
+        color: $grey-color;
+        p {
+          display: inline;
+        }
       }
       .desc {
         p {
+          padding: 5px 0;
           line-height: 1.2;
         }
       }
     } 
   }
-  #team-sect{
+  .team-sect {
     margin-top: 400px;
-    #team-pics{
-      padding-top: 50px;
+    #team-pics {
+      padding-top: 25px;
     }
     @include bottom-shadow();
-    .team-wrapper{
+    .team-wrapper {
       text-align: center;
       width: 100%;
       margin: 0 auto;
@@ -278,13 +283,12 @@ p {
         width: 14%;
         padding: 1%;
         float: left;
-        height: 250px;
         @include respond-to-specific(450px){
           float: none;
           margin: 0 auto;
         }
         @include respond-to-specific(769px){
-          width: 150px;
+          width: 75%;
         }
 
         .member-image{
@@ -294,33 +298,21 @@ p {
           }
         }
 
-
         .member-name{
           text-align: center;
-          font-weight: 700; 
           margin-top: 10px; 
           margin-bottom: 10px; 
-          a{
-            color: #333333;
-          }
         }
       }
     }
   }
 
   #contact-top-sect{
-    h1{
-      font-size: 6em;
-      font-weight: 700;
-    }
     background-color: transparent;
     @include respond-to-specific(450px){
       top: 10%;
-      p{
+      p {
         font-size: 1.2em;
-      }
-      h1{
-        font-size: 5em;
       }
     }
   }
@@ -329,13 +321,12 @@ p {
     @include bottom-shadow();
     margin: 0 auto;
     margin-bottom: 50px;
-    
-    h2{
-      font-weight: 700;
+    width: 350px;
+
+    h2 {
       margin: 20px auto;
     }
     
-    width: 350px;
     #mc_embed_signup{
       text-align: center;
     }
@@ -367,9 +358,8 @@ p {
     }
   }
 
-  #join-sect{
+  .join-sect{
     @include bottom-shadow();
-    margin-bottom:5em;
   }
 
   #blog-sect{
@@ -378,11 +368,26 @@ p {
 
   #blog-content-sect{ 
     @include bottom-shadow();
-    h2{
-      font-size: 2em;
-      font-weight: 700;
+    h2 {
       margin-bottom: 15px;
     }
   }
+
+  .map-sect {
+    @include bottom-shadow();
+    #map {
+      min-height: 500px;
+      margin-top: 0.2em;
+    }
+  }
   
+}
+
+.footer {
+  text-align: center;
+  margin: 1em 0;
+  span {
+    font-size: 0.8em;
+    color: $grey-color;
+  }
 }
