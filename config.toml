@@ -50,3 +50,28 @@ title = "FOR.ai"
     link='https://www.linkedin.com/in/siddhartha-rao-kamalakara/'
     order = 6
     email_suffix = 'siddhartha'
+  [params.team.David]
+    title = "David Tao"
+    bio = ""
+    date = "2019-01-10"
+    img = "img/david.jpg"
+    link = "http://taodav.cc"
+    order = 7
+    email_suffix = 'david'
+  [params.team.Nicole]
+    title = "Nicole Fitzgerald"
+    bio = ""
+    date = "2019-01-10"
+    img = "img/nicole.jpg"
+    link = "https://ninkle.github.io/"
+    order = 8
+    email_suffix = 'nicole'
+  [params.team.Nitarshan]
+    title = "Nitarshan Rajkumar"
+    bio = ""
+    date = "2019-01-10"
+    img = "img/nitarshan.jpg"
+    link = "https://www.nitarshan.com/"
+    order = 9
+    email_suffix = 'nitarshan'
+    

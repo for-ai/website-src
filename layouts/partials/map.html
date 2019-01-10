@@ -10,15 +10,15 @@
     var montreal = {lat: 45.5579564, lng: -73.8703849};
     var hyderabad = {lat: 17.4122998, lng: 78.2679605};
     var sanfrancisco = {lat: 37.7576793, lng: -122.5076397};
-    var chandigarh = {lat: 30.7350626, lng: 76.693489};
+    var daejeon = {lat: 36.3730796, lng: 127.3187599};
 
     var icon = {
       url: "nabla.svg",
-      scaledSize: new google.maps.Size(30, 30)
+      scaledSize: new google.maps.Size(20, 20)
     }
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 1.9,
+      zoom: 1.7,
       center: {lat: 34.395398, lng: -40.5625927},
       disableDefaultUI: true,
       styles:
@@ -373,10 +373,10 @@
       title: 'San Francisco, United States'
     })
     new google.maps.Marker({
-      position: chandigarh,
+      position: daejeon,
       map: map,
       icon:icon,
-      title: 'Chandigarh, India'
+      title: 'Daejeon, South Korea'
     })
   }
 </script>

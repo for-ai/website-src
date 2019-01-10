@@ -280,24 +280,25 @@ h2 {
       width: 100%;
       margin: 0 auto;
       .team-member{
-        width: 14%;
+        width: 18%;
         padding: 1%;
         float: left;
-        @include respond-to-specific(450px){
+        @include respond-to-specific(769px) {
           float: none;
+          width: 50%;
           margin: 0 auto;
         }
-        @include respond-to-specific(769px){
+        @include respond-to-specific(450px) {
+          float: none;
           width: 75%;
+          margin: 0 auto;
         }
-
         .member-image{
           img{
             width: 100%;
             border-radius: 50%;
           }
         }
-
         .member-name{
           text-align: center;
           margin-top: 10px; 
