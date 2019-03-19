@@ -74,4 +74,12 @@ title = "FOR.ai"
     link = "https://www.nitarshan.com/"
     order = 9
     email_suffix = 'nitarshan'
-    
+  [params.team.Alex]
+    title = "Alexander Cowen-Rivers"
+    bio = ""
+    date = "2019-03-19"
+    img = "img/alex.jpg"
+    link = "https://alexanderimanicowenrivers.github.io/"
+    order = 10
+    email_suffix = 'alex'
+
