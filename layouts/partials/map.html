@@ -11,6 +11,7 @@
     var hyderabad = {lat: 17.4122998, lng: 78.2679605};
     var sanfrancisco = {lat: 37.7576793, lng: -122.5076397};
     var daejeon = {lat: 36.3730796, lng: 127.3187599};
+    var london = {lat: 51.5073409, lng: -0.127720};
 
     var icon = {
       url: "nabla.svg",
@@ -345,38 +346,44 @@
     new google.maps.Marker({
       position: toronto,
       map: map,
-      icon:icon,
+      icon: icon,
       title: 'Toronto, Canada'
     });
     new google.maps.Marker({
       position: oxford,
       map: map,
-      icon:icon,
+      icon: icon,
       title: 'Oxford, United Kingdom'
     })
     new google.maps.Marker({
       position: montreal,
       map: map,
-      icon:icon,
+      icon: icon,
       title: 'Montreal, Canada'
     })
     new google.maps.Marker({
       position: hyderabad,
       map: map,
-      icon:icon,
+      icon: icon,
       title: 'Hyderabad, India'
     })
     new google.maps.Marker({
       position: sanfrancisco,
       map: map,
-      icon:icon,
+      icon: icon,
       title: 'San Francisco, United States'
     })
     new google.maps.Marker({
       position: daejeon,
       map: map,
-      icon:icon,
+      icon: icon,
       title: 'Daejeon, South Korea'
+    })
+    new google.maps.Marker({
+      position: london,
+      map: map,
+      icon: icon,
+      title: 'London, United Kingdom'
     })
   }
 </script>
