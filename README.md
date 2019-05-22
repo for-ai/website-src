@@ -1,10 +1,7 @@
-# website-src
-Hugo source for public website
+## FOR.ai webpage
+
+### How to run
+- install [huge](https://gohugo.io/getting-started/quick-start/)
+- run `hugo server`
 
 
-## Requirements
-Make sure you have `hugo` installed [link](https://gohugo.io/getting-started/quick-start/)
-
-## Publishing
-1. Make changes
-2. Run `deploy.sh`
