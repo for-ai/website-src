@@ -3,10 +3,10 @@
     date = '2019-06-03'
     imgSrc = ''
 +++
-<div class="blog-links"><a href="https://arxiv.org/pdf/1905.13678v1.pdf">Arxiv</a><a href="https://github.com/for-ai/TD">Github</a></div>
+<div class="blog-links"><a href="https://arxiv.org/pdf/1905.13678.pdf">Arxiv</a><a href="https://github.com/for-ai/TD">Github</a></div>
 <p>
     Neural networks can represent functions to solve complex tasks that are difficult &mdash;
-    if not impossible &mdash; to write instructions for, such as understanding language and
+    if not impossible &mdash; to write instructions for by hand, such as understanding language and
     recognizing objects. Conveniently, we’ve seen that task performance increases with
     as we use larger networks. However, computational costs for parameter sizes also increase in
     dollars and latency required to train and use models. Practitioners are plagued with networks
