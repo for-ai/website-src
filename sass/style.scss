@@ -34,7 +34,7 @@ a {
   text-decoration: none;
   color: $link-color;
   -webkit-transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all; 
+  -moz-transition: 0.2s ease all;
   transition: 0.2s ease all;
   &:hover {
     color: #cccccc !important;
@@ -46,7 +46,6 @@ a {
 
 p {
   word-break: break-word;
-  white-space: pre-line;
   line-height: 1.5;
   margin: 0;
   font-weight: 300;
@@ -67,7 +66,6 @@ h2 {
   left: 0;
   right: 100px;
   font-weight: 700;
-  margin-top: 45px;
   position: absolute;
   padding-left: 30px;
   padding-right: 15px;
@@ -86,75 +84,18 @@ h2 {
   background-color: transparent;
   border: 0;
   font-size: 1.5em;
-
-  #mmenu-button, #mmenu-closer {
-    display: none;
-    @include respond-to-specific(600px){    
-      display: none;
-      border: 0;
-      color: #ffffff;
-      position: relative;
-      float: right;
-      margin-top: 25px;
-      margin-bottom: 10px;
-      background-color: #ffffff;
-      background-image: none;
-      border: 1px solid #ffffff;
-      border-radius: 4px;
-      padding: 0;
-    }
-  }
-
-  #options{
-    display: block;
-    @include respond-to-specific(600px){
-      display: block;
-    }
-  }
-
-  #mmenu-closer{
-    margin-right: 19px;
-    margin-top: 25px;
-  }
-
-  #mmenu{
-    top:0;
-    right:0;
-    height:100%;
-    width:100%;
-    position: fixed;
-    z-index: 100;
-    display: none;
-    color: #333333;
-    #moptions{
-      margin-top: 50px;
-      font-size: 24px;
-
-    }
-  }
-
-
   ul {
-    @include respond-to-specific(769px){
-      margin-top: 20px;
-    }
     float: right;
+    list-style-type: none;
     li {
-      a:hover {
-        color: #cccccc;
-      }
-
       a {
         color: #333333;
       }
 
-      a:active {
-        color: #e0e0e0;
-      }
       padding: 5px 20px;
       float: left;
       @include respond-to-specific(600px){
-        float: none;
+        font-size: 0.5em;
       }
     }
   }
@@ -180,7 +121,7 @@ h2 {
       margin-bottom: 2em;
     }
   }
-  
+
   #intro-sect-container{
     position: fixed;
     z-index: -1;
@@ -240,15 +181,15 @@ h2 {
       }
     }
   }
-  
+
   .publish-sect {
-    @include bottom-shadow();    
+    @include bottom-shadow();
     .publication{
       margin-bottom: 15px;
       h2 {
         margin: 0;
         line-height: 1.5;
-      } 
+      }
       .authors {
         p {
           color: $grey-color;
@@ -267,7 +208,7 @@ h2 {
           line-height: 1.2;
         }
       }
-    } 
+    }
   }
   .team-sect {
     margin-top: 400px;
@@ -301,8 +242,8 @@ h2 {
         }
         .member-name{
           text-align: center;
-          margin-top: 10px; 
-          margin-bottom: 10px; 
+          margin-top: 10px;
+          margin-bottom: 10px;
         }
       }
     }
@@ -327,7 +268,7 @@ h2 {
     h2 {
       margin: 20px auto;
     }
-    
+
     #mc_embed_signup{
       text-align: center;
     }
@@ -365,12 +306,43 @@ h2 {
 
   #blog-sect{
     @include bottom-shadow();
+    text-align: center;
+    h1{
+      font-size: 40px;
+      margin: 0 auto;
+      margin-bottom:10px;
+      font-weight: 800;
+    }
+    .blog-title{
+      font-size: 20px;
+    }
   }
 
-  #blog-content-sect{ 
+  #blog-content-sect{
+    line-height: 1.7em;
+    font-size: 1.06rem;
+    h1{
+      font-size: 40px;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom:10px;
+      font-weight: 800;
+      @include respond-to-specific(450px){
+        font-size: 25px;
+      }
+    }
     @include bottom-shadow();
-    h2 {
-      margin-bottom: 15px;
+    margin-bottom: 15px;
+    p{
+      margin-bottom: 25px;
+    }
+    .blog-links{
+      text-align: center;
+      a{
+        margin-right: 15px;
+        font-size: 20px;
+      }
+      margin-bottom: 10px;
     }
   }
 
@@ -381,7 +353,6 @@ h2 {
       margin-top: 0.2em;
     }
   }
-  
 }
 
 .footer {

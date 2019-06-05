@@ -1,10 +1,8 @@
 {{partial "header.html" .}}
     <div id="blog-sect" class="container-block">
-        <h1>Blog</h1>
-        <ul id="list">
-            {{ range .Data.Pages }}
-                {{ .Render "li"}}
-            {{ end }}
-        </ul>
+        <h1>FOR.ai Blog</h1>
+        {{ range .Data.Pages }}
+            {{ .Render "a"}}
+        {{ end }}
     </div>
 {{partial "footer.html" .}}
