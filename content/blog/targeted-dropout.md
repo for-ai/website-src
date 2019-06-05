@@ -7,43 +7,42 @@
 <p>
     Neural networks can represent functions to solve complex tasks that are difficult &mdash;
     if not impossible &mdash; to write instructions for by hand, such as understanding language and
-    recognizing objects. Conveniently, we’ve seen that task performance increases with
-    as we use larger networks. However, computational costs for parameter sizes also increase in
-    dollars and latency required to train and use models. Practitioners are plagued with networks
-    being too large to store in device memory, or too slow for real-world utility.
+    recognizing objects. Conveniently, we’ve seen that task performance increases
+    as we use larger networks. However, the increase in computational costs also increases
+    dollars and time required to train and use models. Practitioners are plagued with networks
+    that are too large to store in on-device memory, or too slow for real-world utility.
 </p>
 <h2>Networks are overparameterized</h2>
 <p>
     Progress made in network sparsification has presented post-hoc (after training) methods that allow us
     to remove parameters in a neural network and then fine tune the leftover parameters to achieve a similar
     task performance. The trade off here is that it makes the process of training and preparing a model for
-    evaluation more complex -- requiring surgical procedures for the networks and task performance decreases.
-    Optimistically, this does suggest that neural networks can still represent interesting functions without all
-    of its parameters. And with smaller parameter sizes, we can reduce the costs of computing with neural networks. Unfortunately, for many real world use cases, task performance is a non-negotiable cost.
+    evaluation more complex -- requiring surgical procedures for pruning the networks, and repeated iterations of training.
+    Fortunately, the results from network pruning suggest that neural networks can still represent interesting functions
+    with only a fraction of the total network parameters. And with smaller parameter sizes, we can reduce the costs of
+    computing with neural networks. Unfortunately, for many real world use cases, task performance is a non-negotiable cost.
 </p>
 <p>
     <a href="https://arxiv.org/abs/1803.03635">The Lottery Ticket Hypothesis</a> presents the idea that
-    every function can be represented by a “winning ticket” subnetwork and a larger parameter size simply
-    gives us more lottery tickets. The authors showed that they were able to recover the winning ticket
-    using a weight magnitude-based analysis. A winning ticket retrained with its weights reset to its
-    initialized value achieves task performance competitive with the full network. This idea suggests that
-    if we can sparsify a network by removing only unimportant weights, then we can achieve a smaller parameter
+    a large neural network can be represented by a small subnetwork termed the “winning ticket”.
+    When winning ticket is trained in alone -- with its weights reset to their
+    initial values -- it achieves task performance competitive with the full network. This idea suggests that,
+    if we can find smaller winning ticket subnetworks, then we can achieve a smaller parameter
     size without a task performance sacrifice.
 </p>
 <h2>Understanding parameter importance</h2>
 <p>
     To take advantage of the ideas we've learned so far, we have to understand how to judge the importance of weights.
-    To do this we can study the coadaptation matrix of the neural network's parameters after its done training.
+    To do this we can study the coadaptation matrix of the neural network's parameters after training is complete.
 </p>
 <div>
     <img src="/img/targeted-dropout/comtx1.png" style="width:350px;display:block;margin:0 auto;"/><img src="/img/targeted-dropout/coeq.png" style="width:200px;display:block;margin:0 auto;"/>
 </div>
 <p>
     Position (i, j) of the matrix represents the dependence of parameter i on parameter j. Pruning a set of
-    weights {l, m, n} will change the loss proportional to the sum of the l, m, and nth columns. The weights
-    are ordered by decreasing magnitude from left to right. As we can see from this matrix, the neural network
-    still has some dependence on low magnitude weights, which suggests that sparisfying based on weight magnitude
-    is not enough.
+    weights {l, m, n} will change the loss proportional to the sum of the entries describing the the dependence within the {l, m ,n} subnetwork (i.e entries (l,l), (m,m), (n,n), (l,m), (l,n), (m,n), (m,l), (n,l), and (n,m)). In the figure, the weights
+    are ordered by decreasing magnitude from left to right, top to bottom. As we can see from this matrix, the neural network
+    still has some dependence on low magnitude weights (those towards the right and bottom), which suggests that sparisfying based on weight magnitude will have an significant impact on task performance.
 </p>
 <h2>Targeted Dropout</h2>
 <p>
