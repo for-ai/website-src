@@ -65,7 +65,7 @@
     Empirically we saw that our technique is generally applicable to different architectures
     (ResNet32, VGG, Transformer) solving different task domains (translation, image classification).
     Networks trained with TD were extremely robust to post-hoc pruning. With an additional adaptation of
-    gradually increasing the target portion during training, we can achieve up to 99.95% sparsity
+    gradually increasing the target portion during training, we can achieve up to 99.91% sparsity
     while only losing around 3-4% in task performance. More results and hyperparameters can be reviewed in the Experiments section of our paper.
 </p>
 <h2>Implementation</h2>
