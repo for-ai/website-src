@@ -1,6 +1,7 @@
 +++
     title = 'Targeted Dropout'
     date = '2019-06-03'
+    description = 'Neural networks can represent functions to solve complex tasks that are difficult &mdash; if not impossible &mdash; to write instructions for by hand, such as understanding language and recognizing objects. Conveniently, we’ve seen that task performance increases as we use larger networks. However, the increase in computational costs also increases dollars and time required to train and use models. Practitioners are plagued with networks that are too large to store in on-device memory, or too slow for real-world utility.'
     imgSrc = ''
 +++
 <div class="blog-links"><a href="https://arxiv.org/pdf/1905.13678.pdf">Arxiv</a><a href="https://github.com/for-ai/TD">Github</a></div>
