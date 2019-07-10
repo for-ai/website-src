@@ -66,4 +66,11 @@ title = "FOR.ai"
     link = "https://alexanderimanicowenrivers.github.io/"
     order = 10
     email_suffix = 'alex'
-
+  [params.team.Hari]
+    title = "Hariharan Sezhiyan"
+    bio = ""
+    date = "2019-07-09"
+    img = "img/hari.png"
+    link = "https://hsezhiyan.github.io/Thoughts/"
+    order = 11
+    email_suffix = 'hari'
