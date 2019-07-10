@@ -11,6 +11,7 @@
     var sanfrancisco = {lat: 37.7576793, lng: -122.5076397};
     var daejeon = {lat: 36.3730796, lng: 127.3187599};
     var london = {lat: 51.5073409, lng: -0.127720};
+    var davis = {lat: 38.5568118, lng: -121.7700489};
 
     var icon = {
       url: "nabla.svg",
@@ -377,6 +378,12 @@
       map: map,
       icon: icon,
       title: 'London, United Kingdom'
+    })
+    new google.maps.Marker({
+      position: davis,
+      map: map,
+      icon: icon,
+      title: 'Davis, United States'
     })
   }
 </script>
