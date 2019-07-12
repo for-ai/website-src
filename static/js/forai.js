@@ -103,7 +103,7 @@
       timer=setTimeout(renderSurface);
       return this;
     };
-    this.transition=function(){ 
+    this.transition=function(){
       var transition=d3.selection.prototype.transition.bind(node)();
       colourFunction=null;
       heightFunction=null;
@@ -129,7 +129,7 @@
     surface.setWidth(width);
     this.transition=surface.transition.bind(surface);
     return this;
-  };            
+  };
 })();
 
 
@@ -148,7 +148,7 @@ function gid(id){
 function dataFromFormular(func){
     var output=[];
     for(var x=-20;x<20;x++){
-      var f0=[];            
+      var f0=[];
       output.push(f0);
       for(var y=-20;y<20;y++){
           f0.push(func(x,y));
@@ -156,7 +156,7 @@ function dataFromFormular(func){
     }
     return output;
 }
-  
+
 function init(){
     var surfaces=[
         {
@@ -186,7 +186,7 @@ function init(){
     var group = svg.append("g");
     var ul=d3.select('#intro-graph')
            .append('ul');
-    
+
     renderGraphData(surfaces[0].data, 0)
     var curIdx = 1;
     var renderIntervalInit = function() {
@@ -209,13 +209,13 @@ function init(){
       renderInterval = renderIntervalInit()
     }
 
-} 
+}
 
 function renderGraphData(data, idx){
   d3.select("#intro-graph>svg>g").data([data])
     .surface3D(WIDTH,HEIGHT)
       .transition().duration(1000)
-        .surfaceHeight(function(d){ 
+        .surfaceHeight(function(d){
           return d;
         }).surfaceColor(function(d){
           var c=d3.hsl((d+200+idx*30), 0.8, 0.6).rgb()
