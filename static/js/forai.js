@@ -133,9 +133,13 @@
 })();
 
 
-window.onload = init
 var yaw=0.5,pitch=1, WIDTH=900, HEIGHT=600, drag=false;
 
+window.onload =function() {
+  var height=document.getElementById("content").scrollHeight;
+  document.getElementById("background").style.height = height+"px";
+  init();
+}
 
 function gid(id){
     return document.getElementById(id);
@@ -157,22 +161,12 @@ function init(){
     var surfaces=[
         {
           data: dataFromFormular(function(x,y){
-              return Math.cos(Math.sqrt(x*x+y*y)/5*Math.PI)+Math.cos(x/8*Math.PI)*Math.cos(y/10*Math.PI)*40;
-          })
-        },
-        {
-          data: dataFromFormular(function(x,y){
-              return Math.cos(Math.sqrt(x*x+y*y)/5*Math.PI)*50;
-            })
-        },
-        {
-          data: dataFromFormular(function(x,y){
               return Math.cos(x/15*Math.PI)*Math.cos(y/15*Math.PI)*60+Math.cos(x/8*Math.PI)*Math.cos(y/10*Math.PI)*40;
             })
         },
         {
           data: dataFromFormular(function(x,y){
-              return -(Math.cos(Math.sqrt(x*x+y*y)/6*Math.PI)+1)*150/(Math.pow(x*x+y*y+1,0.3)+1)+50;
+              return Math.cos(x/15*Math.PI)*Math.sin(y/15*Math.PI)*60+Math.sin(x/8*Math.PI)*Math.cos(y/10*Math.PI)*40;
             })
         },
         {
@@ -180,6 +174,12 @@ function init(){
               return (Math.cos(2*x*Math.PI)*Math.cos(x/15*Math.PI)*Math.cos(y/15*Math.PI)*60+Math.cos(x/8*Math.PI)*Math.cos(y/10*Math.PI)*40);
             })
         },
+        {
+          data: dataFromFormular(function(x,y){
+              return Math.cos(x/15*Math.PI)*Math.cos(y/15*Math.PI)*60+Math.cos(x/8*Math.PI)*Math.cos(y/10*Math.PI)*40+Math.cos(x/4*Math.PI)*Math.sin(y/17*Math.PI)*60;
+            })
+        },
+
       ];
     var selected=surfaces[0];
     var svg=d3.select("#intro-graph>svg")
@@ -208,6 +208,7 @@ function init(){
     window.onfocus = function() {
       renderInterval = renderIntervalInit()
     }
+
 } 
 
 function renderGraphData(data, idx){
