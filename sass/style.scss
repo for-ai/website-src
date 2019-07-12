@@ -63,38 +63,32 @@ h2 {
 }
 
 #header {
-  left: 0;
-  right: 100px;
-  font-weight: 700;
-  position: absolute;
-  padding-left: 30px;
-  padding-right: 15px;
-  display: block;
-  @include respond-to-specific(1050px){
-    padding-left: 15px;
-    padding-right: 15px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 1em;
+  margin: 1.5em 0 0;
+  @include respond-to-specific(769px) {
+    font-size: 1.8em;
   }
-
-  @include respond-to-specific(769px){
-    right: 10px;
-    position: fixed;
-    padding-bottom: 15px;
+  #navbar {
+    width: 1000px;
+    margin: 0 auto;
+    @include respond-to-specific(1144px){
+      width: 80%;
+    }
   }
-
-  background-color: transparent;
-  border: 0;
-  font-size: 1.5em;
   ul {
+    margin: 0;
+    padding: 0;
     float: right;
     list-style-type: none;
     li {
       a {
         color: #333333;
       }
-
-      padding: 5px 20px;
+      padding: 5px 15px;
       float: left;
-      @include respond-to-specific(600px){
+      @include respond-to-specific(600px) {
         font-size: 0.5em;
       }
     }
