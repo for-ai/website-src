@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview &mdash; rl-codebase 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Generic Reinforcment Learning Codebase" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> rl-codebase
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#abstract">Abstract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#related-work">Related Work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-for-ai-rl">Introduction: for-ai/rl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">rl-codebase</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Overview</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/contents.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<p>Vast reinforcement learning (RL) research groups, such as DeepMind and OpenAI, have their internal (private) reinforcement learning codebases, which enable quick prototyping and comparing of ideas to many SOTA methods. We argue the five fundamental properties of a sophisticated research codebase are; modularity, reproducibility, many RL algorithms pre-implemented, speed and ease of running on different hardware/ integration with visualization packages. Currently, there does not exist any RL codebase, to the author’s knowledge, which contains all the five properties, particularly with TensorBoard logging and abstracting away cloud hardware such as TPU’s from the user. The codebase aims to help distil the best research practices into the community as well as ease the entry access and accelerate the pace of the field.</p>
+</div>
+<div class="section" id="related-work">
+<h2>Related Work<a class="headerlink" href="#related-work" title="Permalink to this headline">¶</a></h2>
+<p>There are currently various implementations available for reinforcement learning codebase like OpenAI baselines <a class="reference internal" href="#dhariwal-2017" id="id1">[DHK+17]</a>, Stable baselines <a class="reference internal" href="#hill-2019" id="id2">[Hil19]</a>, Tensorforce <a class="reference internal" href="#schaarschmidt-2017" id="id3">[SKF17]</a>, Ray rllib <a class="reference internal" href="#liang-2017" id="id4">[LLN+17]</a>, Intel Coach <a class="reference internal" href="#caspi-2017" id="id5">[CLN17]</a>, Keras-RL <a class="reference internal" href="#kerasrl-2019" id="id6">[KR19]</a>, Dopamine baselines <a class="reference internal" href="#castro-2018" id="id7">[CMG+18]</a> and TF-Agents <a class="reference internal" href="#guadarramatf" id="id8">[GKR+]</a>. Ray rllib <a class="reference internal" href="#liang-2017" id="id9">[LLN+17]</a> is amongst the strongest of existing RL frameworks, supporting; distributed operations, TensorFlow <a class="reference internal" href="#abadi-2016" id="id10">[ABC+16]</a>, PyTorch <a class="reference internal" href="#paszke-2017" id="id11">[PGCC17]</a> and multi-agent reinforcement learning (MARL). Unlike Ray rllib, we choose to focus on Tensorflow support, allowing us to integrate specific framework visualisation and experiment tracking into our codebase. On top of this, we are developing a Kuberenetes script for MacOS and Linux users to connect to any cloud computing platform, such as Google TPU’s, Amazon AWS etc. Most other frameworks are plagued with problems like usability issues (difficult to get started and increment over), very little modularity in code (no/ little hierarchy and code reuse), no asynchronous training support, weak support for TensorBoard logging and so on. All these problems are solved by our project, which is a generic codebase built for reinforcement learning (RL) research in Tensorflow <a class="reference internal" href="#schaarschmidt-2017" id="id12">[SKF17]</a>, with favoured RL agents pre-implemented as well as integration with OpenAI Gym <a class="reference internal" href="#brockman-2016" id="id13">[BCP+16]</a> environment focusing on quick prototyping and visualisation.</p>
+<p>Deep Reinforcement Learning Reinforcement learning refers to a paradigm in artificial intelligence where an agent performs a sequence of actions in an environment to maximise rewards <a class="reference internal" href="#sutton-1998" id="id14">[SB98]</a>. It is in many ways more general and challenging than supervised learning since it requires no labels to train on; instead, the agent interacts continuously with the environment, gathering more and more data and guiding its learning process.</p>
+</div>
+<div class="section" id="introduction-for-ai-rl">
+<h2>Introduction: for-ai/rl<a class="headerlink" href="#introduction-for-ai-rl" title="Permalink to this headline">¶</a></h2>
+<p>Further to the core ideas mentioned in the beginning, a good research codebase should enable good development practices such as continually checkpointing the model’s parameters as well as instantly restoring them to the latest checkpoint when available. Moreover, it should be composed of simple, interchangeable building blocks, making it easy to understand and to prototype new research ideas.</p>
+<p>We will first introduce the framework for this project, and then we will detail significant components. Lastly, we will discuss how to get started with training an agent under this framework.</p>
+<p>This codebase allows training RL agents by a training script as simple as the below for loop.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ for epoch in range(epochs):
+$ state = env.reset()
+        $ for step in range(max_episode_steps):
+        $ last_state = state
+        $ action = agent.act(state)
+        $ state, reward, done = env.step(action)
+        $ agent.observe(last_state, action, reward, state)
+        $ agent.update()
+</pre></div>
+</div>
+<p>To accomplish this, we chose to modularise the codebase in the hierarchy shown below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rl_codebase
+$ |- train.py
+$ |---&gt; memory
+$ |   |- registry.py
+$ |---&gt; hparams
+$ |   |- registry.py
+$ |---&gt; envs
+$ |   |- registry.py
+$ |---&gt; models
+$ |   |- registry.py
+$ |---&gt; agents
+$ |   |- registry.py
+$ |   |---&gt; algos
+$ |   |   |- registry.py
+$ |   |   |---&gt; act_select
+$ |   |   |   |- registry.py
+$ |   |   |---&gt; grad_comp
+$ |   |   |   |- registry.py
+</pre></div>
+</div>
+<p>Our modularisation enables simple and easy-to-read implementation of each component, such as the Agent, Algo and Environment class, as shown below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ class Agent:
+        $ self.model: Model
+        $ self.algo: Algo
+
+        $ def observe(last_state, action, reward, new_state)
+        $ def act(state) -&gt; action
+        $ def update()
+
+$ class Algo(Agent):
+        $ def select_action(distribution) -&gt; action
+        $ def compute_gradients(trajectory, parameters) -&gt; gradients
+
+$ class Environment:
+        $ def reset() -&gt; state
+        $ def step(action) -&gt; state, reward, done
+</pre></div>
+</div>
+<p>The codebase includes agents like Deep Q Network <a class="reference internal" href="#mnih-2013" id="id15">[MKS+13]</a>, Noisy DQN <a class="reference internal" href="#plappert-2017" id="id16">[PHD+17]</a>, Vanilla Policy Gradient <a class="reference internal" href="#sutton-2000" id="id17">[SMSM00]</a>, Deep Deterministic Policy Gradient <a class="reference internal" href="#silver2014deterministic" id="id18">[SLH+14]</a> and Proximal Policy Optimization <a class="reference internal" href="#schulman2017proximal" id="id19">[SWD+17]</a>. The project also includes simple random sampling and proportional prioritized experience replay approaches, support for Discrete and Box environments, option to render environment replay and record the replay in a video. The project also gives the possibility to conduct model-free asynchronous training, setting hyperparameters for your algorithm of choice, modularized action and gradient update functions and option to show your training logs in a TensorBoard summary.</p>
+<p>In order to run an experiment, run:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">train.py</span> <span class="pre">--sys</span> <span class="pre">...</span> <span class="pre">--hparams</span> <span class="pre">...</span> <span class="pre">--output_dir</span> <span class="pre">....</span></code></p>
+<p>Ideally, “train.py” should never need to be modified for any of the typical single agent environments. It covers the logging of reward, checkpointing, loading, rendering environment/ dealing with crashes and saving the experiments hyperparameters, which takes a significant workload off the average reinforcement learning researcher.</p>
+<p>Below we summerize the key arguments</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>“--sys”(str) defines the system chosen to run experiment with;  e.g. “local” for running on the local machine.
+“--env”(str) specifies the environment.
+“--hparam_override”(str) overrides hyperparameters.
+“--train_steps”(int) sets training length.
+“--test_episodes”(int) tests episodes.
+“--eval_episodes”(int) sets Validation episodes.
+“--training&quot;(bool) freeze model weights is set to False.
+“--copies”(int) set the number of times to perform multiple versions of training/ testing.
+“--render”(bool) turns rendering on/ off.
+“--record_video”(bool) records the video with, which outputs a .mp4 of each recorded episode.
+“--num_workers&quot;(int) seamlessly brings our synchronous agent into an asynchronous agent.
+</pre></div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>We have outlined the benefits of using a highly modularised reinforcement learning codebase. The next stages of development for the RL codebase are implementing more SOTA model-free RL techniques (GAE, Rainbow, SAC, IMPALA), introducing model-based approaches, such as World Models <a class="reference internal" href="#ha-2018" id="id20">[HS18]</a>, integrating into an open-sourced experiment managing tool and expanding the codebases compatibility with a broader range of environments, such as Habitat <a class="reference internal" href="#savva-2019" id="id21">[SKM+19]</a>. We would also like to see automatic hyperparameter optimization techniques to be integrated, such as Bayesian Optimization method which was crucial to the success of some of DeepMinds most considerable reinforcement learning feats <a class="reference internal" href="#chen-2018" id="id22">[CHW+18]</a>.</p>
+</div>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>We would like to thank all other members of For.ai, for useful discussions and feedback.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-bibliography-contents-0"><dl class="citation">
+<dt class="label" id="abadi-2016"><span class="brackets"><a class="fn-backref" href="#id10">ABC+16</a></span></dt>
+<dd><p>Martín Abadi, Paul Barham, Jianmin Chen, Zhifeng Chen, Andy Davis, Jeffrey Dean, Matthieu Devin, Sanjay Ghemawat, Geoffrey Irving, Michael Isard, and others. Tensorflow: a system for large-scale machine learning. In <em>12th $\$USENIX$\$ Symposium on Operating Systems Design and Implementation ($\$OSDI$\$ 16)</em>, 265–283. 2016.</p>
+</dd>
+<dt class="label" id="brockman-2016"><span class="brackets"><a class="fn-backref" href="#id13">BCP+16</a></span></dt>
+<dd><p>Greg Brockman, Vicki Cheung, Ludwig Pettersson, Jonas Schneider, John Schulman, Jie Tang, and Wojciech Zaremba. Openai gym. <em>arXiv preprint arXiv:1606.01540</em>, 2016.</p>
+</dd>
+<dt class="label" id="caspi-2017"><span class="brackets"><a class="fn-backref" href="#id5">CLN17</a></span></dt>
+<dd><p>Itai Caspi, Gal Leibovich, and Gal Novik. Reinforcement learning coach.(dec. 2017). <em>URL https://doi. org/10.5281/zenodo</em>, 2017.</p>
+</dd>
+<dt class="label" id="castro-2018"><span class="brackets"><a class="fn-backref" href="#id7">CMG+18</a></span></dt>
+<dd><p>Pablo Samuel Castro, Subhodeep Moitra, Carles Gelada, Saurabh Kumar, and Marc G Bellemare. Dopamine: a research framework for deep reinforcement learning. <em>arXiv preprint arXiv:1812.06110</em>, 2018.</p>
+</dd>
+<dt class="label" id="chen-2018"><span class="brackets"><a class="fn-backref" href="#id22">CHW+18</a></span></dt>
+<dd><p>Yutian Chen, Aja Huang, Ziyu Wang, Ioannis Antonoglou, Julian Schrittwieser, David Silver, and Nando de Freitas. Bayesian optimization in alphago. <em>arXiv preprint arXiv:1812.06855</em>, 2018.</p>
+</dd>
+<dt class="label" id="dhariwal-2017"><span class="brackets"><a class="fn-backref" href="#id1">DHK+17</a></span></dt>
+<dd><p>Prafulla Dhariwal, Christopher Hesse, Oleg Klimov, Alex Nichol, Matthias Plappert, Alec Radford, John Schulman, Szymon Sidor, Yuhuai Wu, and Peter Zhokhov. Openai baselines. <em>GitHub, GitHub repository</em>, 2017.</p>
+</dd>
+<dt class="label" id="guadarramatf"><span class="brackets"><a class="fn-backref" href="#id8">GKR+</a></span></dt>
+<dd><p>Sergio Guadarrama, Anoop Korattikara, Oscar Ramirez, Pablo Castro, Ethan Holly, Sam Fishman, Ke Wang, Ekaterina Gonina, Chris Harris, Vincent Vanhoucke, and others. Tf-agents: a library for reinforcement learning in tensorflow.</p>
+</dd>
+<dt class="label" id="ha-2018"><span class="brackets"><a class="fn-backref" href="#id20">HS18</a></span></dt>
+<dd><p>David Ha and Jürgen Schmidhuber. Recurrent world models facilitate policy evolution. In <em>Advances in Neural Information Processing Systems</em>, 2450–2462. 2018.</p>
+</dd>
+<dt class="label" id="hill-2019"><span class="brackets"><a class="fn-backref" href="#id2">Hil19</a></span></dt>
+<dd><p>Hill. Hill-a/stable-baselines. Jun 2019. URL: <a class="reference external" href="https://github.com/hill-a/stable-baselines">https://github.com/hill-a/stable-baselines</a>.</p>
+</dd>
+<dt class="label" id="kerasrl-2019"><span class="brackets"><a class="fn-backref" href="#id6">KR19</a></span></dt>
+<dd><p>Matthias Plappert Keras-Rl. Keras-rl/keras-rl. Mar 2019. URL: <a class="reference external" href="https://github.com/keras-rl/keras-rl">https://github.com/keras-rl/keras-rl</a>.</p>
+</dd>
+<dt class="label" id="liang-2017"><span class="brackets">LLN+17</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id9">2</a>)</span></dt>
+<dd><p>Eric Liang, Richard Liaw, Robert Nishihara, Philipp Moritz, Roy Fox, Joseph Gonzalez, Ken Goldberg, and Ion Stoica. Ray rllib: a composable and scalable reinforcement learning library. <em>arXiv preprint arXiv:1712.09381</em>, 2017.</p>
+</dd>
+<dt class="label" id="mnih-2013"><span class="brackets"><a class="fn-backref" href="#id15">MKS+13</a></span></dt>
+<dd><p>Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller. Playing atari with deep reinforcement learning. <em>arXiv preprint arXiv:1312.5602</em>, 2013.</p>
+</dd>
+<dt class="label" id="paszke-2017"><span class="brackets"><a class="fn-backref" href="#id11">PGCC17</a></span></dt>
+<dd><p>Adam Paszke, Sam Gross, Soumith Chintala, and Gregory Chanan. Pytorch. <em>Computer software. Vers. 0.3</em>, 2017.</p>
+</dd>
+<dt class="label" id="plappert-2017"><span class="brackets"><a class="fn-backref" href="#id16">PHD+17</a></span></dt>
+<dd><p>Matthias Plappert, Rein Houthooft, Prafulla Dhariwal, Szymon Sidor, Richard Y Chen, Xi Chen, Tamim Asfour, Pieter Abbeel, and Marcin Andrychowicz. Parameter space noise for exploration. <em>arXiv preprint arXiv:1706.01905</em>, 2017.</p>
+</dd>
+<dt class="label" id="savva-2019"><span class="brackets"><a class="fn-backref" href="#id21">SKM+19</a></span></dt>
+<dd><p>Manolis Savva, Abhishek Kadian, Oleksandr Maksymets, Yili Zhao, Erik Wijmans, Bhavana Jain, Julian Straub, Jia Liu, Vladlen Koltun, Jitendra Malik, and others. Habitat: a platform for embodied ai research. <em>arXiv preprint arXiv:1904.01201</em>, 2019.</p>
+</dd>
+<dt class="label" id="schaarschmidt-2017"><span class="brackets">SKF17</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id12">2</a>)</span></dt>
+<dd><p>Michael Schaarschmidt, Alexander Kuhnle, and Kai Fricke. Tensorforce: a tensorflow library for applied reinforcement learning. <em>Web page</em>, 2017.</p>
+</dd>
+<dt class="label" id="schulman2017proximal"><span class="brackets"><a class="fn-backref" href="#id19">SWD+17</a></span></dt>
+<dd><p>John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, and Oleg Klimov. Proximal policy optimization algorithms. <em>arXiv preprint arXiv:1707.06347</em>, 2017.</p>
+</dd>
+<dt class="label" id="silver2014deterministic"><span class="brackets"><a class="fn-backref" href="#id18">SLH+14</a></span></dt>
+<dd><p>David Silver, Guy Lever, Nicolas Heess, Thomas Degris, Daan Wierstra, and Martin Riedmiller. Deterministic policy gradient algorithms. In <em>ICML</em>. 2014.</p>
+</dd>
+<dt class="label" id="sutton-1998"><span class="brackets"><a class="fn-backref" href="#id14">SB98</a></span></dt>
+<dd><p>Richard S Sutton and Andrew G Barto. Introduction to reinforcement learning. vol. 135. 1998.</p>
+</dd>
+<dt class="label" id="sutton-2000"><span class="brackets"><a class="fn-backref" href="#id17">SMSM00</a></span></dt>
+<dd><p>Richard S Sutton, David A McAllester, Satinder P Singh, and Yishay Mansour. Policy gradient methods for reinforcement learning with function approximation. In <em>Advances in neural information processing systems</em>, 1057–1063. 2000.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Generic Reinforcment Learning Codebase" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, FOR.ai
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
