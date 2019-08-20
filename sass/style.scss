@@ -175,12 +175,10 @@ h2 {
     }
   }
 
-  #publish-sect {
+  .publish-sect {
     #subtitle {
       margin: -0.5em 0 0.5em;
     }
-  }
-  .publish-sect {
     @include bottom-shadow();
     .publication {
       margin-bottom: 15px;
