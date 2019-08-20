@@ -1,9 +1,11 @@
-<meta property="og:title" content="FOR.ai | Blog" />
+<meta property="og:title" content="FOR.ai | Publication" />
 <meta property="og:description" content="Publications from members of FOR.ai." />
 
 {{partial "header.html" .}}
-<div id="publish-sect" class="container-block">
-    <h1>FOR.ai Publications</h1>
+<div id="publish-sect" class="publish-sect container-block">
+    <h1>Publications</h1>
+    <p id='subtitle'>Publications by members of FOR.ai</p>
+    
     {{ range .Data.Pages }}
     {{ .Render "li"}}
     {{ end }}

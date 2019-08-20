@@ -175,9 +175,14 @@ h2 {
     }
   }
 
+  #publish-sect {
+    #subtitle {
+      margin: -0.5em 0 0.5em;
+    }
+  }
   .publish-sect {
     @include bottom-shadow();
-    .publication{
+    .publication {
       margin-bottom: 15px;
       h2 {
         margin: 0;
@@ -203,6 +208,7 @@ h2 {
       }
     }
   }
+
   .team-sect {
     margin-top: 400px;
     #team-pics {
