@@ -1,14 +1,15 @@
 <div class="publication">
-  <a rel="noopener noreferrer" href="{{.Params.link}}">
-    <h2>{{.Params.Title}}</h2>
-  </a>
-  <div class="authors">
-    <p>{{.Params.Authors}}</p>
-  </div>
-  <div class="desc">
-    <p>{{.Params.Abstract}}</p>
-  </div>
-  <div class="conference">
-  	<p>{{.Params.Conference}}</p> | <a class="source-code" href={{.Params.code}}>source code</a>
-  </div>
+    <a rel="noopener noreferrer" href="{{.Params.link}}">
+        <h2>{{.Params.Title}}</h2>
+    </a>
+    <div class="authors">
+        <p>{{.Params.Authors}}</p>
+    </div>
+    <div class="desc">
+        <p>{{truncate 300 .Params.Abstract}}</p>
+    </div>
+    <div class="conference">
+        <p>{{.Params.Conference}}</p>{{if .Params.Code}} | <a class="source-code" href={{.Params.code}}>source
+            code</a>{{end}}
+    </div>
 </div>

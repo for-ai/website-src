@@ -1,51 +1,64 @@
 {{partial "header.html" .}}
 <div class="title-sect">
-  <div class="intro-header container-block">
-    <img id="title-logo" src="/img/text-logo-color.svg" alt="FOR.ai">
-    <div class="subtitle">Distributed AI Research Collaboration</div>
-  </div>
+    <div class="intro-header container-block">
+        <img id="title-logo" src="/img/text-logo-color.svg" alt="FOR.ai">
+        <div class="subtitle">Distributed AI Research Collaboration</div>
+    </div>
 </div>
 <div id="about-us" class="team-sect container-block">
-  <h1>About Us</h1>
-  <p>We are a multi-disciplinary team of scientists and engineers who like doing research for fun. Our only objective is to publish good machine learning research that is useful and interesting. Our collaborators include researchers from research institutions such as Google Brain, University of Oxford, and Vector Institute for Artificial Intelligence.
+    <h1>About Us</h1>
+    <p>We are a multi-disciplinary team of scientists and engineers who like doing research for fun. Our only objective
+        is to publish good machine learning research that is useful and interesting. Our collaborators include
+        researchers from research institutions such as Google Brain, University of Oxford, and Vector Institute for
+        Artificial Intelligence.
 
-    Our published experiments and tools can be found on <a href="https://github.com/for-ai/">github.com/for-ai</a>.</p>
-  <div class="team-wrapper">
-    <div id="team-pics">
-      {{range sort .Site.Params.team "order" "asc" }}
-      <div class="team-member">
-        <a rel="noopener noreferrer" href="{{.link}}">
-          <div class="member-image"><img src="{{.img}}" alt=""></div>
-          <div class="member-name">{{.title}}</div>
-        </a>
-      </div>
-      {{end}}
-      <div class="clear"></div>
-      <span class="emails">
-        {
-        {{range $i, $e := sort .Site.Params.team "order" "asc" }}
-        {{ if $i }}, {{ end }}
-        <a href="mailto:{{.email_suffix}}@for.ai">{{.email_suffix}}</a>
-        {{end}}
-        }
-        <span>&commat;for.ai</span>
-      </span>
+        Our published experiments and tools can be found on <a href="https://github.com/for-ai/">github.com/for-ai</a>.
+    </p>
+    <div class="team-wrapper">
+        <div id="team-pics">
+            {{range sort .Site.Params.team "order" "asc" }}
+            <div class="team-member">
+                <a rel="noopener noreferrer" href="{{.link}}">
+                    <div class="member-image"><img src="{{.img}}" alt=""></div>
+                    <div class="member-name">{{.title}}</div>
+                </a>
+            </div>
+            {{end}}
+            <div class="clear"></div>
+            <span class="emails">
+                {
+                {{range $i, $e := sort .Site.Params.team "order" "asc" }}
+                {{ if $i }}, {{ end }}
+                <a href="mailto:{{.email_suffix}}@for.ai">{{.email_suffix}}</a>
+                {{end}}
+                }
+                <span>&commat;for.ai</span>
+            </span>
+        </div>
     </div>
-  </div>
 </div>
 <div id="publications" class="publish-sect container-block">
-  <h1>Publications</h1>
-  {{range after 1 (where .Site.Pages "Section" "publications")}} {{ .Render "li" }} {{end}}
+    <h1>Publications</h1>
+    {{range first 5 (sort (where .Site.Pages "Section" "publications") "Weight" "desc")}}
+    {{ .Render "li" }}
+    {{end}}
+    <a href="/publications">View all contributor publications</a>
 </div>
 {{partial "map.html"}}
 <div id="join-the-team" class="join-sect container-block">
-  <h1>Join The Team</h1>
-  <p>We're looking for individuals interested in contributing to cross-institutional research projects on machine learning using neural networks. We recruit students and industrial members globally. Our only requirement is a strong background in computer science, mathematics and statistics. Remote work is our modus operandi, although we regularly organize working sessions in cities with more than one member.
+    <h1>Join The Team</h1>
+    <p>We're looking for individuals interested in contributing to cross-institutional research projects on machine
+        learning using neural networks. We recruit students and industrial members globally. Our only requirement is a
+        strong background in computer science, mathematics and statistics. Remote work is our modus operandi, although
+        we regularly organize working sessions in cities with more than one member.
 
-    If you're interested in deep learning and neural networks, and are well-versed in calculus, statistics, and software development then you're a perfect fit.
+        If you're interested in deep learning and neural networks, and are well-versed in calculus, statistics, and
+        software development then you're a perfect fit.
 
-    The team is volunteer-run, but we do provide mentorship and authorship opportunities, and we have a rich set of resources and training infrastructure at our disposal!
+        The team is volunteer-run, but we do provide mentorship and authorship opportunities, and we have a rich set of
+        resources and training infrastructure at our disposal!
 
-    Email <a href="mailto:team@for.ai">team@for.ai</a> with your resume and a brief note on your interest in ML and any relevant background (courses taken, projects completed, etc.)</p>
+        Email <a href="mailto:team@for.ai">team@for.ai</a> with your resume and a brief note on your interest in ML and
+        any relevant background (courses taken, projects completed, etc.)</p>
 </div>
 {{partial "footer.html" .}}

@@ -1,0 +1,7 @@
++++
+    title = 'GaussianProcesses.jl: A Nonparametric Bayes package for the Julia Language'
+    authors = 'Jamie Fairbrother, Christopher Nemeth, Maxime Rischard, Johanni Brea, Thomas Pinder'
+    abstract = 'Gaussian processes are a class of flexible nonparametric Bayesian tools that are widely used across the sciences, and in industry, to model complex data sources. Key to applying Gaussian process models is the availability of well-developed open source software, which is available in many programming languages. In this paper, we present a tutorial of the GaussianProcesses.jl package that has been developed for the Julia programming language. GaussianProcesses.jl utilises the inherent computational benefits of the Julia language, including multiple dispatch and just-in-time compilation, to produce a fast, flexible and user-friendly Gaussian processes package. The package provides many mean and kernel functions with supporting inference tools to fit exact Gaussian process models, as well as a range of alternative likelihood functions to handle non-Gaussian data (e.g. binary classification models) and sparse approximations for scalable Gaussian processes. The package makes efficient use of existing Julia packages to provide users with a range of optimization and plotting tools.'
+    link='https://arxiv.org/abs/1812.09064'
+    code='https://github.com/STOR-i/GaussianProcesses.jl'
++++
