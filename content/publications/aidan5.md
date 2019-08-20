@@ -5,5 +5,4 @@
     abstract = 'Tensor2Tensor is a library for deep learning models that is well-suited for neural machine translation and includes the reference implementation of the state-of-the-art Transformer model. '
     link='https://arxiv.org/abs/1803.07416'
     code='https://github.com/tensorflow/tensor2tensor'
-    weight=1
 +++
