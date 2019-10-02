@@ -114,6 +114,9 @@ h2 {
     @include respond-to-specific(450px){
       margin-bottom: 2em;
     }
+    .subtitle {
+      margin: -2mm 0 2mm;
+    }
   }
 
   #intro-sect-container{
