@@ -214,6 +214,15 @@ h2 {
     margin-top: 400px;
     #team-pics {
       padding-top: 25px;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 1em;
+      @include respond-to-specific(769px) {
+        grid-template-columns: auto auto auto;
+      }
+      @include respond-to-specific(425px) {
+        grid-template-columns: auto;
+      }
     }
     @include bottom-shadow();
     .team-wrapper {
@@ -221,21 +230,14 @@ h2 {
       width: 100%;
       margin: 0 auto;
       .team-member{
-        width: 18%;
-        padding: 1%;
-        float: left;
-        @include respond-to-specific(769px) {
-          float: none;
-          width: 50%;
-          margin: 0 auto;
-        }
+        width: 100%;
         @include respond-to-specific(450px) {
-          float: none;
           width: 75%;
           margin: 0 auto;
         }
         .member-image{
-          img{
+          img {
+            max-width: 240px;
             width: 100%;
             border-radius: 50%;
           }

@@ -14,6 +14,8 @@
     var davis = {lat: 38.5568118, lng: -121.7700489};
     var warsaw = {lat: 52.2330649, lng: 20.9207691};
     var edinburgh = {lat: 55.9503053, lng: -3.1918862};
+    var cambridge = {lat: 52.1988369, lng: 0.0848821};
+    var istanbul = {lat: 41.0052363, lng: 28.8717541};
 
     var icon = {
       url: "nabla.svg",
@@ -398,6 +400,18 @@
       map: map,
       icon: icon,
       title: 'Edinburgh, United Kingdom'
+    })
+    new google.maps.Marker({
+      position: cambridge,
+      map: map,
+      icon: icon,
+      title: 'Cambridge, United Kingdom'
+    })
+    new google.maps.Marker({
+      position: istanbul,
+      map: map,
+      icon: icon,
+      title: 'Istanbul, Turkey'
     })
   }
 </script>

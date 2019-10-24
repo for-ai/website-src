@@ -18,23 +18,24 @@
         <div id="team-pics">
             {{range sort .Site.Params.team "order" "asc" }}
             <div class="team-member">
-                <a rel="noopener noreferrer" href="{{.link}}">
+                <a rel="noopener noreferrer" href="{{.link}}" target='_blank'>
                     <div class="member-image"><img src="{{.img}}" alt=""></div>
                     <div class="member-name">{{.title}}</div>
                 </a>
             </div>
             {{end}}
-            <div class="clear"></div>
-            <span class="emails">
-                {
-                {{range $i, $e := sort .Site.Params.team "order" "asc" }}
-                {{ if $i }}, {{ end }}
-                <a href="mailto:{{.email_suffix}}@for.ai">{{.email_suffix}}</a>
-                {{end}}
-                }
-                <span>&commat;for.ai</span>
-            </span>
+
         </div>
+        <div class="clear"></div>
+        <span class="emails">
+            {
+            {{range $i, $e := sort .Site.Params.team "order" "asc" }}
+            {{ if $i }}, {{ end }}
+            <a href="mailto:{{.email_suffix}}@for.ai">{{.email_suffix}}</a>
+            {{end}}
+            }
+            <span>&commat;for.ai</span>
+        </span>
     </div>
 </div>
 <div id="publications" class="publish-sect container-block">
