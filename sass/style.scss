@@ -215,7 +215,7 @@ h2 {
     #team-pics {
       padding-top: 25px;
       display: grid;
-      grid-template-columns: auto auto auto auto auto;
+      grid-template-columns: repeat(5, 1fr);
       grid-gap: 1em;
       @include respond-to-specific(769px) {
         grid-template-columns: auto auto;
@@ -237,7 +237,6 @@ h2 {
         }
         .member-image{
           img {
-            max-width: 240px;
             width: 100%;
             border-radius: 50%;
           }
