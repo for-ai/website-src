@@ -82,3 +82,35 @@ title = "FOR.ai"
     link = "https://github.com/koz4k"
     order = 12
     email_suffix = 'piotr'
+  [params.team.Winnie]
+    title = "Winnie Xu"
+    bio = ""
+    date = "2019-10-24"
+    img = "img/winnie.png"
+    link = "https://winniexu.ca"
+    order = 13
+    email_suffix = 'winnie'
+  [params.team.Acyr]
+    title = "Acyr Locatelli"
+    bio = ""
+    date = "2019-10-24"
+    img = "img/acyr.jpg"
+    link = "https://acyrl.github.io/"
+    order = 14
+    email_suffix = 'acyr'
+  [params.team.Alessandro]
+    title = "Alessandro Melis"
+    bio = ""
+    date = "2019-10-24"
+    img = "img/alessandro.jpg"
+    link = "https://alemelis.gitlab.io/"
+    order = 15
+    email_suffix = 'alessandro'
+  [params.team.Mert]
+    title = "Mert Yüksekgönül"
+    bio = ""
+    date = "2019-10-24"
+    img = "img/mert.jpg"
+    link = "https://www.linkedin.com/in/mertyuksekgonul/"
+    order = 16
+    email_suffix = 'mert'
