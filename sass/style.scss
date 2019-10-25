@@ -215,10 +215,10 @@ h2 {
     #team-pics {
       padding-top: 25px;
       display: grid;
-      grid-template-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto;
       grid-gap: 1em;
       @include respond-to-specific(769px) {
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
       }
       @include respond-to-specific(425px) {
         grid-template-columns: auto;
