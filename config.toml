@@ -114,3 +114,11 @@ title = "FOR.ai"
     link = "https://www.linkedin.com/in/mertyuksekgonul/"
     order = 16
     email_suffix = 'mert'
+  [params.team.Amr]
+    title = "Amr Kayid"
+    bio = ""
+    date = "2020-10-21"
+    img = "img/amr.jpg"
+    link = "https://amrmkayid.github.io/"
+    order = 17
+    email_suffix = 'amr'

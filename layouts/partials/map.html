@@ -16,6 +16,7 @@
     var edinburgh = {lat: 55.9503053, lng: -3.1918862};
     var cambridge = {lat: 52.1988369, lng: 0.0848821};
     var istanbul = {lat: 41.0052363, lng: 28.8717541};
+    var cairo = {lat: 30.0594838, lng: 31.2233591};
 
     var icon = {
       url: "nabla.svg",
@@ -412,6 +413,12 @@
       map: map,
       icon: icon,
       title: 'Istanbul, Turkey'
+    })
+    new google.maps.Marker({
+      position: cairo,
+      map: map,
+      icon: icon,
+      title: 'Cairo, Egypt'
     })
   }
 </script>
