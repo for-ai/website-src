@@ -74,14 +74,6 @@ title = "FOR.ai"
     link = "https://hsezhiyan.github.io/Thoughts/"
     order = 11
     email_suffix = 'hari'
-  [params.team.Piotr]
-    title = "Piotr Kozakowski"
-    bio = ""
-    date = "2019-07-11"
-    img = "img/piotr.png"
-    link = "https://github.com/koz4k"
-    order = 12
-    email_suffix = 'piotr'
   [params.team.Winnie]
     title = "Winnie Xu"
     bio = ""
